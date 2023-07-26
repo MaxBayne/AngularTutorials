@@ -1,0 +1,21 @@
+{{storesInfo.name}}
+<hr/>
+
+<!-- interpolation
+<img src="{{storesInfo.imgUrl}}" alt="" /> -->
+
+<!-- Properity Binding -->
+<img [src]="storesInfo.imgUrl" alt="" *ngIf="showImage" />
+
+<br/><br/>
+<button type="button" class="btn btn-primary" (click)="toggleImage()">Like</button>
+
+<hr/>
+
+<!-- Structural Directive -->
+<ul>
+    <li *ngFor="let branch of storesInfo.branches">
+        {{branch}}
+    </li>
+</ul>
+
