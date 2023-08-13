@@ -1,0 +1,8 @@
+<label for="" class="form-label">Category ({{selectedCategoryId}})</label>
+<!-- Using Two Way Binding by ngModel -->
+<select #comboCategories class="form-select form-select-lg" id="cbo_categories" (change)="OnCategoryChanged(comboCategories.value)">
+    <option value="-1" selected>All</option>
+    <option *ngFor="let category of categories" [value]="category.Id">
+        {{category.Name}}
+    </option>
+</select>

@@ -1,0 +1,54 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price($)</th>
+            <th scope="col">Price(EGP)</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">CategoryId</th>
+            <th scope="col">Image</th>
+            <th scope="col">Count</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Structural Directive like (ngFor,ngIf) -->
+        <ng-container *ngFor="let product of products">
+        
+            <tr *ngIf="product.Quantity!=-1">
+
+                <td>{{product.Id}}</td>
+                <td>{{product.Name}}</td>
+                <!-- Using Pipe To Convert Price Value to Currency -->
+                <td [ngClass]="{'text-success':product.UnitPrice<=500 && product.UnitPrice>200,'text-primary':product.UnitPrice<=200 && product.UnitPrice>100,'text-warning':product.UnitPrice<=100}">
+                    {{product.UnitPrice|currency:'USD'}}
+                </td>
+                <td>{{product.UnitPrice|  uSDToEGP:30 | currency:'EGP' }}</td>
+                <td>
+                    <ng-container [ngSwitch]="product.Quantity">
+                        <span *ngSwitchCase="0">out of stock</span>
+                        <span *ngSwitchCase="1">last 1 item</span>
+                        <span *ngSwitchCase="2">last 2 item</span>
+                        <span *ngSwitchDefault>{{product.Quantity}}</span>
+                    </ng-container>
+                </td>
+                <td>{{product.CategoryId}}</td>
+                <td><img [src]="product.ImgUrl" LightBox defaultColorOfBorder="silver" colorOfBorder="red" /></td>
+                <td>
+                    <!-- Template Variable -->
+                    <input #countOfItem type="number" class="form-control" name="" id="" aria-describedby="count"
+                        placeholder="1">
+                </td>
+        
+                <td>
+                    <!-- <button type="button" class="btn btn-primary" (click)="goToDetails(product.Id)">Details</button> -->
+                    <a class="btn btn-primary"  role="button" [routerLink]="['/products',product.Id]">Details</a>
+                    &nbsp;
+                    <button type="button" class="btn btn-success" (click)="buy(product.Id,product.UnitPrice,countOfItem.value)">Add</button>
+                </td>
+            </tr>
+
+    </ng-container>
+    </tbody>
+</table>

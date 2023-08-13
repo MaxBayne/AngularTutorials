@@ -1,0 +1,6 @@
+ <div class="col-10">
+            <app-categories-drop-down-list (CategoryChangedEvent)="OnCategoryChanged($event)"></app-categories-drop-down-list>
+            <br>
+            <app-products-Grid [selectedCategoryId]="currentSelectedCategoryId" ></app-products-Grid>
+ </div>
+         
