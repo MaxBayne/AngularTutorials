@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,15 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
   //styles:['h1{color:red}']
 })
-export class AppComponent 
+export class AppComponent
 {
   //Define Properites ---------------------------
   title = 'AngularApplication';
-
-  //Define Functions ----------------------------
-  printMessage():string
+  
+  constructor()
   {
-    return 'Hello World , '+ this.title;
+    
   }
 
+  
+
+  //Define Functions ----------------------------
+  
 }

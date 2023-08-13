@@ -7,8 +7,15 @@ import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { HomeComponent } from './Components/home/home.component';
-import { ProductslistComponent } from './Components/products/productslist/productslist.component';
 import { FormsModule } from '@angular/forms';
+
+
+import { LightBoxDirective } from './Directives/light-box.directive';
+import { USDToEGPPipe } from './Pipes/usdto-egp.pipe';
+import { CategoriesDropDownListComponent } from './Components/categories/categoriesList/categories-drop-down-list/categories-drop-down-list.component';
+import { ProductsGridComponent } from './Components/products/products-grid/products-grid.component';
+import { ProductsViewComponent } from './Components/products/products-view/products-view.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +24,12 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     SidebarComponent,
     HomeComponent,
-    ProductslistComponent
+    LightBoxDirective,
+    USDToEGPPipe,
+    CategoriesDropDownListComponent,
+    ProductsGridComponent,
+    ProductsViewComponent,
+    
   ],
   imports: [
     BrowserModule,
