@@ -16,13 +16,13 @@ export class ProductServiceService {
 
     this.productsList=
     [
-      { Id:100,Name:"Item A",ImgUrl:"https://fakeimg.pl/200x100/",Quantity:5,UnitPrice:100,CategoryId:1},
-      { Id:200,Name:"Item B",ImgUrl:"https://fakeimg.pl/200x100/",Quantity:3,UnitPrice:140,CategoryId:1},
-      { Id:300,Name:"Item C",ImgUrl:"https://fakeimg.pl/200x100/",Quantity:2,UnitPrice:180,CategoryId:1},
-      { Id:400,Name:"Item D",ImgUrl:"https://fakeimg.pl/200x100/",Quantity:1,UnitPrice:190,CategoryId:2},
-      { Id:500,Name:"Item E",ImgUrl:"https://fakeimg.pl/200x100/",Quantity:0,UnitPrice:200,CategoryId:2},
-      { Id:600,Name:"Item F",ImgUrl:"https://fakeimg.pl/200x100/",Quantity:4,UnitPrice:500,CategoryId:3},
-      { Id:700,Name:"Item G",ImgUrl:"https://fakeimg.pl/200x100/",Quantity:-1,UnitPrice:250,CategoryId:1}
+      { Id:100,Name:"Item A",ImgUrl:"https://picsum.photos/200",Quantity:5,UnitPrice:100,CategoryId:1},
+      { Id:200,Name:"Item B",ImgUrl:"https://picsum.photos/200",Quantity:3,UnitPrice:140,CategoryId:1},
+      { Id:300,Name:"Item C",ImgUrl:"https://picsum.photos/200",Quantity:2,UnitPrice:180,CategoryId:1},
+      { Id:400,Name:"Item D",ImgUrl:"https://picsum.photos/200",Quantity:1,UnitPrice:190,CategoryId:2},
+      { Id:500,Name:"Item E",ImgUrl:"https://picsum.photos/200",Quantity:0,UnitPrice:200,CategoryId:2},
+      { Id:600,Name:"Item F",ImgUrl:"https://picsum.photos/200",Quantity:4,UnitPrice:500,CategoryId:3},
+      { Id:700,Name:"Item G",ImgUrl:"https://picsum.photos/200",Quantity:-1,UnitPrice:250,CategoryId:1}
     ]
   }
 

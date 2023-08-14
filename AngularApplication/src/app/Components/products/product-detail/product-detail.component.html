@@ -1,3 +1,20 @@
-<p>
-  product-detail works!
-</p>
+<div class="row">
+<div class="col-6">
+  <div class="card">
+    <img class="card-img-top" [src]="product?.ImgUrl" alt="Title" height="500">
+    <div class="card-body">
+      <h4 class="card-title">{{product?.Name}}</h4>
+      <div class="card-text">
+        <ul>
+          <li>Id : {{product?.Id}}</li>
+          <li>Quantity : {{product?.Quantity}}</li>
+          <li>UnitPrice: {{product?.UnitPrice}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+
+  </div>
+</div>
+</div>
